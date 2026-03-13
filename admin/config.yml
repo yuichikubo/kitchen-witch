@@ -18,7 +18,7 @@ backend:
 media_folder:  "uploads"
 public_folder: "/uploads"
 locale: ja
-site_url: "https://kitchen-witch-magic.netlify.app"
+site_url: "https://heroic-genie-b938e8.netlify.app"
 show_preview_links: true
 
 # ================================================================
