@@ -250,3 +250,113 @@ collections:
             name: ogp_image
             widget: image
             required: false
+
+  # ── 6. お客様の声ページ ────────────────────────────────────
+  - name: "voice"
+    label: "💬 お客様の声"
+    files:
+      - name: "voice"
+        label: "お客様の声ページを編集"
+        file: "content/pages/voice.json"
+        fields:
+
+          - label: "統計バー"
+            name: stats
+            widget: object
+            fields:
+              - { label: "登録者数（HTML可: 例 1,200<em>名+</em>）", name: members,            widget: string }
+              - { label: "登録者ラベル",                              name: members_label,      widget: string }
+              - { label: "満足度（HTML可: 例 4.9<em>/5</em>）",      name: satisfaction,       widget: string }
+              - { label: "満足度ラベル",                              name: satisfaction_label, widget: string }
+              - { label: "継続率（HTML可: 例 96<em>%</em>）",        name: retention,          widget: string }
+              - { label: "継続率ラベル",                              name: retention_label,    widget: string }
+
+          - label: "無料レシピ配信の声"
+            name: recipe_voices
+            widget: list
+            summary: "{{fields.name}}"
+            fields: &voice_fields
+              - { label: "コメント",       name: text,   widget: text }
+              - { label: "絵文字アバター", name: avatar, widget: string }
+              - { label: "お名前・属性",   name: name,   widget: string }
+              - { label: "受講コース名",   name: badge,  widget: string }
+              - { label: "詳細コメント（引用）", name: detail, widget: text, required: false }
+
+          - label: "フードレメディ講座の声"
+            name: course_voices
+            widget: list
+            summary: "{{fields.name}}"
+            fields: *voice_fields
+
+          - label: "リトリートの声"
+            name: retreat_voices
+            widget: list
+            summary: "{{fields.name}}"
+            fields: *voice_fields
+
+  # ── 7. ストーリーページ ────────────────────────────────────
+  - name: "story"
+    label: "📖 ストーリー"
+    files:
+      - name: "story"
+        label: "ストーリーページを編集"
+        file: "content/pages/story.json"
+        fields:
+          - { label: "ポートレート名前", name: portrait_name, widget: string, default: "【お名前】" }
+          - { label: "役職・肩書き",     name: portrait_role, widget: string, default: "Kitchen Witch 主宰" }
+
+          - label: "活動の歩み（タイムライン）"
+            name: timeline
+            widget: list
+            summary: "{{fields.year}}: {{fields.title}}"
+            fields:
+              - { label: "時期（例: 二十代）",   name: year,  widget: string }
+              - { label: "見出し",               name: title, widget: string }
+              - { label: "説明文",               name: text,  widget: text }
+
+  # ── 8. リトリートページ ────────────────────────────────────
+  - name: "retreat"
+    label: "🌲 リトリート"
+    files:
+      - name: "retreat"
+        label: "リトリートページを編集"
+        file: "content/pages/retreat.json"
+        fields:
+
+          - label: "リトリートプログラム（3種）"
+            name: programs
+            widget: list
+            min: 3
+            max: 3
+            summary: "{{fields.season_badge}}: {{fields.title}}"
+            fields:
+              - { label: "季節バッジ（例: 春開催）", name: season_badge, widget: string }
+              - { label: "絵文字",                   name: emoji,        widget: string }
+              - { label: "季節・時期（英+日）",       name: season,       widget: string }
+              - { label: "プログラム名（改行可）",    name: title,        widget: text }
+              - { label: "説明文",                   name: desc,         widget: text }
+              - { label: "期間（例: 2泊3日）",       name: duration,     widget: string }
+              - { label: "定員（例: 6名）",          name: capacity,     widget: string }
+              - { label: "場所",                     name: location,     widget: string }
+              - { label: "参加費（例: ¥88,000（税込））", name: price,   widget: string }
+
+          - label: "3日間のスケジュール"
+            name: schedule
+            widget: list
+            summary: "{{fields.time}}: {{fields.title}}"
+            fields:
+              - { label: "時間帯（例: 1日目 午後）", name: time,  widget: string }
+              - { label: "タイトル",                 name: title, widget: string }
+              - { label: "説明文",                   name: text,  widget: text }
+
+          - label: "参加者の声（3件）"
+            name: voices
+            widget: list
+            min: 3
+            max: 3
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "コメント",       name: text,   widget: text }
+              - { label: "絵文字アバター", name: avatar, widget: string }
+              - { label: "お名前・属性",   name: name,   widget: string }
+              - { label: "受講コース名",   name: badge,  widget: string }

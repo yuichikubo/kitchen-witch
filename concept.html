@@ -108,7 +108,7 @@
       </p>
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
-    <div class="remedy-grid">
+    <div class="remedy-grid" id="concept-principles-grid">
       <div class="remedy-card kw-reveal" style="--kw-i:0">
         <span class="remedy-card__num">01</span>
         <h3 class="remedy-card__title">旬の食材を選ぶ</h3>
@@ -156,7 +156,7 @@
       </p>
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
-    <div class="recipe-grid">
+    <div class="recipe-grid" id="concept-seasons-grid">
       <article class="recipe-card kw-reveal" style="--kw-i:0">
         <div class="recipe-card__photo recipe-card__photo--spring">
           <span class="recipe-card__emoji">🌸</span>
@@ -213,7 +213,7 @@
       <h2 class="section-header__ja" id="concept4-title">大切にしていること</h2>
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
-    <div class="about-cards">
+    <div class="about-cards" id="concept-values-grid">
       <div class="value-card kw-reveal" style="--kw-i:0">
         <div class="value-card__icon">🌱</div>
         <h3 class="value-card__title">旬を食べる</h3>
@@ -295,6 +295,7 @@
     <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
   </div>
 </footer>
+<script src="js/cms-loader.js"></script>
 <script src="js/effects.js"></script>
   <script>
     if (window.netlifyIdentity) {
@@ -306,6 +307,8 @@
         }
       });
     }
+    KwCms.loadSettings();
+    KwCms.loadConceptPage();
   </script>
 </body>
 </html>

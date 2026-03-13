@@ -205,7 +205,7 @@
       <h2 class="section-header__ja" id="story-timeline-title">活動の歩み</h2>
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
-    <div class="story-timeline kw-reveal">
+    <div class="story-timeline kw-reveal" id="story-timeline">
       <div class="timeline-item">
         <p class="timeline-item__year">幼少期〜高校</p>
         <h3 class="timeline-item__title">島根の山奥で育つ</h3>
@@ -297,6 +297,7 @@
     <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
   </div>
 </footer>
+<script src="js/cms-loader.js"></script>
 <script src="js/effects.js"></script>
   <script>
     if (window.netlifyIdentity) {
@@ -308,6 +309,8 @@
         }
       });
     }
+    KwCms.loadSettings();
+    KwCms.loadStoryPage();
   </script>
 </body>
 </html>

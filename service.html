@@ -86,7 +86,7 @@
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
 
-    <div class="service-grid">
+    <div class="service-grid" id="service-cards-grid">
 
       <!-- 01: 無料レシピ配信 -->
       <article class="service-card kw-reveal" style="--kw-i:0" aria-labelledby="svc1-title">
@@ -233,7 +233,7 @@
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
 
-    <div class="remedy-grid kw-reveal">
+    <div class="remedy-grid kw-reveal" id="service-faq-grid">
       <div class="remedy-card">
         <span class="remedy-card__num">Q 01</span>
         <h3 class="remedy-card__title">料理が苦手でも大丈夫ですか？</h3>
@@ -342,6 +342,7 @@
   </div>
 </footer>
 
+<script src="js/cms-loader.js"></script>
 <script src="js/effects.js"></script>
   <script>
     if (window.netlifyIdentity) {
@@ -353,6 +354,8 @@
         }
       });
     }
+    KwCms.loadSettings();
+    KwCms.loadServicePage();
   </script>
 </body>
 </html>

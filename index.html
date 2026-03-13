@@ -146,7 +146,7 @@
           コンセプトをくわしく見る →
         </a>
       </div>
-      <div class="about-cards">
+      <div class="about-cards" id="about-cards-grid">
         <div class="value-card kw-reveal" style="--kw-i:0">
           <div class="value-card__icon">🌱</div>
           <h3 class="value-card__title">旬を食べる</h3>
@@ -202,7 +202,7 @@
       </p>
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
-    <div class="recipe-grid">
+    <div class="recipe-grid" id="home-recipe-grid">
       <article class="recipe-card kw-reveal" style="--kw-i:0">
         <div class="recipe-card__photo recipe-card__photo--spring">
           <span class="recipe-card__emoji">🌱</span>
@@ -330,7 +330,7 @@
       <h2 class="section-header__ja" id="voice-index-title">体験者の声</h2>
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
-    <div class="voice-grid">
+    <div class="voice-grid" id="home-voice-grid">
       <div class="voice-card kw-reveal" style="--kw-i:0">
         <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
         <p class="voice-card__text">生姜や根菜の使い方が変わってから、体の冷えが気にならなくなりました。難しいことは何もなくて、台所がずっと好きな場所になりました。</p>
@@ -440,6 +440,7 @@
     <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
   </div>
 </footer>
+<script src="js/cms-loader.js"></script>
 <script src="js/effects.js"></script>
   <script>
     if (window.netlifyIdentity) {
@@ -451,6 +452,8 @@
         }
       });
     }
+    KwCms.loadSettings();
+    KwCms.loadTopPage();
   </script>
 </body>
 </html>

@@ -108,7 +108,7 @@
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
 
-    <div class="retreat-grid">
+    <div class="retreat-grid" id="retreat-programs-grid">
 
       <!-- 春 -->
       <article class="retreat-card kw-reveal" style="--kw-i:0" aria-labelledby="ret1-title">
@@ -236,7 +236,7 @@
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
 
-    <div class="story-timeline kw-reveal">
+    <div class="story-timeline kw-reveal" id="retreat-schedule-timeline">
       <div class="timeline-item">
         <p class="timeline-item__year">1日目 午後</p>
         <h3 class="timeline-item__title">到着・ウェルカムティー・自己紹介</h3>
@@ -301,7 +301,7 @@
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
 
-    <div class="voice-grid">
+    <div class="voice-grid" id="retreat-voice-grid">
       <div class="voice-card kw-reveal" style="--kw-i:0">
         <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
         <p class="voice-card__text">野草を摘んで、その場で食べる体験が忘れられません。スーパーで買う食材とは全然違う「命をいただく」感覚がありました。帰ってからも自然に旬のものを選ぶようになりました。</p>
@@ -409,6 +409,7 @@
   </div>
 </footer>
 
+<script src="js/cms-loader.js"></script>
 <script src="js/effects.js"></script>
   <script>
     if (window.netlifyIdentity) {
@@ -420,6 +421,8 @@
         }
       });
     }
+    KwCms.loadSettings();
+    KwCms.loadRetreatPage();
   </script>
 </body>
 </html>

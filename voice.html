@@ -102,7 +102,7 @@
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
 
-    <div class="voice-grid">
+    <div class="voice-grid" id="voice-recipe-grid">
 
       <div class="voice-card kw-reveal" style="--kw-i:0">
         <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
@@ -157,7 +157,7 @@
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
 
-    <div class="voice-grid">
+    <div class="voice-grid" id="voice-course-grid">
 
       <div class="voice-card kw-reveal" style="--kw-i:0">
         <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
@@ -213,7 +213,7 @@
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
 
-    <div class="voice-grid">
+    <div class="voice-grid" id="voice-retreat-grid">
 
       <div class="voice-card kw-reveal" style="--kw-i:0">
         <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
@@ -328,6 +328,7 @@
   </div>
 </footer>
 
+<script src="js/cms-loader.js"></script>
 <script src="js/effects.js"></script>
   <script>
     if (window.netlifyIdentity) {
@@ -339,6 +340,8 @@
         }
       });
     }
+    KwCms.loadSettings();
+    KwCms.loadVoicePage();
   </script>
 </body>
 </html>

@@ -329,6 +329,7 @@ function handleFormSubmit() {
   alert('送信ありがとうございます。2〜3営業日以内にご返信いたします。');
 }
 </script>
+  <script src="js/cms-loader.js"></script>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function(user) {
@@ -339,6 +340,7 @@ function handleFormSubmit() {
         }
       });
     }
+    KwCms.loadSettings();
   </script>
 </body>
 </html>
