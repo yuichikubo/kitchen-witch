@@ -275,24 +275,34 @@ collections:
             name: recipe_voices
             widget: list
             summary: "{{fields.name}}"
-            fields: &voice_fields
-              - { label: "コメント",       name: text,   widget: text }
-              - { label: "絵文字アバター", name: avatar, widget: string }
-              - { label: "お名前・属性",   name: name,   widget: string }
-              - { label: "受講コース名",   name: badge,  widget: string }
+            fields:
+              - { label: "コメント",            name: text,   widget: text }
+              - { label: "絵文字アバター",      name: avatar, widget: string }
+              - { label: "お名前・属性",        name: name,   widget: string }
+              - { label: "受講コース名",        name: badge,  widget: string }
               - { label: "詳細コメント（引用）", name: detail, widget: text, required: false }
 
           - label: "フードレメディ講座の声"
             name: course_voices
             widget: list
             summary: "{{fields.name}}"
-            fields: *voice_fields
+            fields:
+              - { label: "コメント",            name: text,   widget: text }
+              - { label: "絵文字アバター",      name: avatar, widget: string }
+              - { label: "お名前・属性",        name: name,   widget: string }
+              - { label: "受講コース名",        name: badge,  widget: string }
+              - { label: "詳細コメント（引用）", name: detail, widget: text, required: false }
 
           - label: "リトリートの声"
             name: retreat_voices
             widget: list
             summary: "{{fields.name}}"
-            fields: *voice_fields
+            fields:
+              - { label: "コメント",            name: text,   widget: text }
+              - { label: "絵文字アバター",      name: avatar, widget: string }
+              - { label: "お名前・属性",        name: name,   widget: string }
+              - { label: "受講コース名",        name: badge,  widget: string }
+              - { label: "詳細コメント（引用）", name: detail, widget: text, required: false }
 
   # ── 7. ストーリーページ ────────────────────────────────────
   - name: "story"
