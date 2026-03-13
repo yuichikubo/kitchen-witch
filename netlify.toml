@@ -11,23 +11,49 @@
 
 # ── リダイレクト（拡張子なしURL） ──────────────────────────
 [[redirects]]
-  from = "/concept";  to = "/concept.html";  status = 200
+  from   = "/concept"
+  to     = "/concept.html"
+  status = 200
+
 [[redirects]]
-  from = "/service";  to = "/service.html";  status = 200
+  from   = "/service"
+  to     = "/service.html"
+  status = 200
+
 [[redirects]]
-  from = "/contact";  to = "/contact.html";  status = 200
+  from   = "/contact"
+  to     = "/contact.html"
+  status = 200
+
 [[redirects]]
-  from = "/story";    to = "/story.html";    status = 200
+  from   = "/story"
+  to     = "/story.html"
+  status = 200
+
 [[redirects]]
-  from = "/retreat";  to = "/retreat.html";  status = 200
+  from   = "/retreat"
+  to     = "/retreat.html"
+  status = 200
+
 [[redirects]]
-  from = "/voice";    to = "/voice.html";    status = 200
+  from   = "/voice"
+  to     = "/voice.html"
+  status = 200
+
 [[redirects]]
-  from = "/admin";    to = "/admin/index.html"; status = 200
+  from   = "/admin"
+  to     = "/admin/index.html"
+  status = 200
+
 [[redirects]]
-  from = "/recipes/:id";  to = "/recipes/detail.html"; status = 200
+  from   = "/recipes/:id"
+  to     = "/recipes/detail.html"
+  status = 200
+
 [[redirects]]
-  from = "/recipes/:id/"; to = "/recipes/detail.html"; status = 200
+  from   = "/recipes/:id/"
+  to     = "/recipes/detail.html"
+  status = 200
 
 # ── ヘッダー ────────────────────────────────────────────────
 [[headers]]
